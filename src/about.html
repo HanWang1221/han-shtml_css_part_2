@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./about.css">
+</head>
+
+<body>
+  <div class="background"></div>
+
+  <header>
+    <a href="../index.html">
+      <img src="../public/img/logo-black.png" alt="">
+    </a>
+    <!-- 
+  1.希望网页上有竖向排列的字符，并不是横向排列的，就用ol或者ul，ul标签是不含有数字标号的，但是ol是标签为数字按顺序标号的。写li之后，后面加入内容。
+  2.在css中：如果有以下代码在ol或者ul中:list-style-image: url("/img/1.svg",意思即是规定了竖向排列内容的标签的具体样式，自动可以改变标签的样式。);-->
+    <ul>
+      <li>Full Stack Engineer</li>
+      <li>Frond End Engineer</li>
+      <li>Back End Engineer</li>
+      <li>Database Engineer</li>
+    </ul>
+
+  </header>
+
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas cum ea quae enim nemo itaque et eaque facere nisi
+    voluptates dignissimos dicta mollitia deserunt ipsum quos consectetur optio, dolores officiis voluptatem.
+    Repudiandae, possimus tempora placeat alias eius voluptatibus voluptatum illum ratione delectus! Ut reiciendis sed
+    corrupti, officiis maxime nostrum culpa deleniti quis asperiores vel delectus nesciunt ab vero soluta quia molestiae
+    dolores sapiente possimus tenetur? Illo, facere aliquid neque similique adipisci sed cumque corporis voluptas
+    reiciendis veniam nisi dignissimos necessitatibus accusantium! Deleniti nihil culpa nobis expedita rem facilis
+    molestiae at obcaecati vel, ab, tenetur suscipit esse maxime possimus mollitia minima molestias vero. Illo doloribus
+    deserunt porro quae quaerat natus laboriosam. Aspernatur nihil quisquam sit unde ab, ipsa ipsum. Tenetur nisi
+    debitis nesciunt praesentium iusto eum perspiciatis quod repudiandae exercitationem distinctio atque, nulla, iure
+    ipsa, suscipit soluta ea aut laborum. Earum exercitationem atque illo aliquam ducimus dolorum excepturi nam eaque
+    eos est veritatis fuga iste architecto velit reiciendis at non delectus ab accusantium, aspernatur voluptatem iure.
+    Vel ipsam illum blanditiis perferendis cumque sed dolor nam labore quasi, sunt et. Ipsa, beatae accusantium? Ullam
+    tempore explicabo saepe dolorem hic earum in molestias eveniet placeat similique repellendus recusandae aperiam
+    sequi error ipsa tempora facere adipisci, incidunt, voluptatum quae maiores dicta est laborum. Hic facilis illum
+    deserunt neque doloremque amet eaque blanditiis magni ad quaerat, ullam ex? Consectetur minima iusto illum? Nisi at
+    dignissimos facere ab, numquam beatae explicabo totam odio iusto, ea impedit fugiat quae excepturi animi ut
+    asperiores? Magni esse qui sequi animi architecto repudiandae nulla alias quidem doloribus officiis autem nam
+    reprehenderit illum exercitationem incidunt voluptate facilis dolores voluptates accusantium totam, modi unde?
+    Aspernatur vitae provident voluptatibus delectus culpa aut laboriosam ullam, nihil magni explicabo! Nulla eos,
+    natus, ullam neque itaque accusantium soluta deleniti, similique placeat qui est necessitatibus alias consequuntur.
+  </p>
+  </main>
+
+  <!-- 在网页中制作table，分三步：thead、tbody、tfoot。每一个里面的行，用tr来表示行。比如表头只有一行，所以只有一对tr。整个表格除了表头还有五行，所以除了表头就有5个tr。表里的内容用th、td来表示。区别在于，th是代表表头单元格，所以因此：thead都要用th来写表中的内容，tbody中的最左侧的一个表格的内容也需要用th来写，即整个表格的左侧边列，而且也要加入scope的描述，代表竖排列。效果为中间对齐，自动加粗。td定义普通的表格数据单元格，用来填充表格的内容。
+     给一整行单独上色，在tr中写class之后再添加颜色。因为tr代表的就是一行。
+     合并表中的格子：方法为例如需要合并第三列中的竖着的第一项和第二项，则在第一项中的td中输入rowspan表示列合并，再加上合并的数量。相对应的，需要在下面的行中去掉被合并的那一行td。同理同一行的两个格子合并的话，比如合并第四行的第四列和第五例，合并成一个大行。那么就是把第四列和第五列合并，在一行中删除一个td，并且写clospan，输入需要合并的数量。：即 就是-->
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">YEAR</th>
+        <th scope="col">ORGANIZATION</th>
+        <th scope="col">POSIRION</th>
+        <th scope="col">ACHIEVEMENT</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr class="table-blue">
+        <th scope="row">1</th>
+        <td></td>
+        <td rowspan="2">Hello world</td>
+        <td></td>
+        <td></td>
+
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td></td>
+        <td></td>
+        <td></td>
+
+      </tr>
+      <tr class="table-blue">
+        <th scope="row">3</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td></td>
+        <td colspan="3">Nice to meet you!</td>
+
+
+      </tr>
+      <tr class="table-blue">
+        <th scope="row">5</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+<!-- 添加需要跳转的内容继续用a+tab，之后如果想要可以download图片的话可以选择在图片的名字后面加入download即可。tips：如果在网站中遇到不可以下载的图片的时候，可以自行去inspect里面的图片位置，之后添加download字样，之后就可以了，但是不要刷新，刷新会恢复原初。 -->
+     </tbody>
+  </table>
+
+<a href="..//public/img/logo-black.png">Show Full Image</a>
+    <a href="..//public/img/logo-black.png" download="">Download Image</a>
+
+    
+</body>
+
+
+
+
+
+</html>

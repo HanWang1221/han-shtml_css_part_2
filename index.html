@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Han.index_html</title>
+  <link rel="shortcut icon" href="./img/logo-black.ico" type="image/x-icon"> <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <!-- 背景设置颜色 -->
+  <div class="background"></div>
+
+  <!-- 给网页添加一个toTop的标志，可以一键返回最上面。样式设置具体在CSS文件中。 -->
+  <div class="toTop">
+    <a href="#top">
+      <span>Top</span>
+    </a>
+  </div>
+
+  <!-- 设置导航栏navigation -->
+<header>
+  <!-- 网站的logo放在最前面 -->
+<div class="logo">Han's space</div>
+<!-- 
+  1.设置导航栏的按钮点关联其他页面功能的点点以跳转.
+  2.跳转的方式是用a+tab，#的目的是跳转为本页面的内容，用的是#加section（哪部分），然后-再加上名称。如果想跳转其他网站输入网址即可;如果想跳转本地文件夹也是输入./，如果跳转其他文件夹就输入../，两个点即可。;
+  3.span的意义是跳转的东西加入名字，span + tab，+class，输入文本样式内容,假如class之后方便区分在css中调节样式。之后输入文本就可以。
+  4.如果跳转的操作按钮不是主体以文字的形式产生的，那么就输入img，表示跳转的方式是点击图片即可。同理不属于本地文件夹的图片可以用../,两个点的方式来引用。
+  5.几个可以跳转的按钮就写几个 <a>  </a> 的组合，里面包含跳转所需要点击的内容。即 <a> </a>之间夹着span或者img。-->
+<nav>
+  <a href="#">
+    <span class="mySpan">Home</span>
+  </a>
+  <a href="./src/about.html">
+    <span class="mySpan">About Me</span>
+  </a>
+  <a href="#section-html">
+    <span class="mySpan">HTML</span>
+  </a>
+  <a href="#section-css">
+    <span class="mySpan">CSS</span>
+  </a>
+  <a href="#section-js">
+    <span class="mySpan">Javascript</span>
+  </a>
+
+</nav>
+<!-- 导航栏后添加的图片样式,alt=“logo”的作用是如果图片损坏，会告诉网站的观看者这个位置的内容是什么。可能有很多img整个网页，所以最好给它一个headphoto的名字，之后用img.headphoto在css中约束它的样式。-->
+<img class="headphoto" src="../html_css_part_2/public/img/logo-black.ico" alt="logo">
+
+</header>
+
+<main>
+  <!--  1.添加main的内容，音频视频等。
+        2.section设置的目的是限制它的宽度和边界，随着网页打开的大小而缩放，并且有一个最大宽度，即网页全屏的时候的具体大小。
+        3.需要限制的内容就都填写在section之内。例如我要添加audio和video。
+        4.在video中如果想设置自动播放需要加入autoplay muted，因为不加muted不会播放；
+        5.controls是进度条，可以播放声音以及全屏等功能；
+        6.loop意思是循环播放。
+        7.video的四大基本项：autoplay自动播放、muted静音、controls进度条、loop循环
+        8.换行符br，可以有提醒的作用，提醒其他编写者已经结束了上一part,也需要在section中写，因为section是归纳整个的尺寸的。
+        9.写网页中的大段文字需要用article，里面有h1到h6不同的题头，h1是指的是title，h2-h6都是可以有多个的。
+        10.段落用p表示，意思是paragraph。
+        11.编写字用lorem可以编写很多内容,lorem*5,lorem120。
+        12.如果想跳转的话，需要在h2后面添加id=“section xxx”，与前面navi部分的的按钮跳转相对应。
+        -->
+   <section class="mySection">
+    <video muted autoplay controls loop src="./video/video.mp4">
+    </video>
+    <audio controls src="./audio/music.mp3"></audio>
+
+
+    <br>
+    <h1>ABOUT HTML CSS JAVASCRIPT</h1>
+    <article>
+      <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam maiores id commodi accusamus saepe repudiandae voluptate sed, sit maxime consequuntur laboriosam molestias placeat ex nesciunt quibusdam, nemo repellat recusandae aspernatur.
+      Optio inventore fugit quibusdam aliquam est voluptas dolores consequatur deserunt reprehenderit quae autem nam soluta, incidunt aliquid beatae debitis dolorem maiores quas atque quasi eveniet facere? Molestiae provident dicta eaque.
+      Fugit architecto eveniet doloremque tempore, ullam facilis nesciunt sed dolores quos voluptatum odit eaque laboriosam ad neque obcaecati reiciendis, accusamus minus, inventore nulla corrupti et ea amet soluta. Labore, deserunt.
+      Tempore quas tenetur, explicabo quos unde id. Magnam commodi officiis aut, voluptates voluptatem odio, placeat quis dolores aliquam quod iste maxime eveniet quas ab similique quia dolore fuga cum? Asperiores.
+      Doloremque, alias dolorem nulla dolore dolores eius, ipsum vero minus obcaecati f acere voluptatem ad saepe consequuntur necessitatibus sunt dignissimos quisquam esse similique laborum error reiciendis itaque. Sapiente amet quidem aliquam?
+      </p>
+
+      <h2 id="section-html">HTML</h2>
+      <p class="html">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, minus, officiis facere reprehenderit nam reiciendis doloremque similique ratione, totam voluptatum modi ipsam molestias culpa quia dolor quos! Tempora, ea quia!
+      Incidunt similique ipsam nesciunt eveniet deserunt, velit molestiae sunt culpa, nobis quis sapiente dolorum et, ab nulla veniam architecto accusamus doloribus nemo. Odit delectus provident est, inventore deleniti nobis numquam.
+      Commodi iure soluta quo necessitatibus sint aperiam eveniet? Rerum omnis culpa architecto! Quam dicta nulla eveniet, a recusandae impedit vero nisi quos voluptas excepturi incidunt, assumenda consequatur aperiam ex accusantium!
+      Dolores autem voluptate, porro soluta voluptatum tenetur sapiente officia rerum quasi vel cupiditate tempora ad quas doloribus amet architecto laboriosam mollitia perferendis velit debitis voluptatibus. Accusamus animi quod rem sit.
+      Ab nostrum voluptatum id dicta laboriosam consequatur necessitatibus cum, consectetur quos iure incidunt beatae sit magnam autem dolores suscipit architecto dignissimos quisquam. Accusantium odio nihil ducimus dignissimos repellat reprehenderit repudiandae!
+      Odit eveniet recusandae nulla esse repudiandae voluptas, est ducimus et tempora odio magni earum, tenetur molestias minus cupiditate eaque ut dolore ullam! Ea esse fugiat temporibus, ipsum voluptatem placeat nesciunt.
+      Explicabo fugit aut laudantium, dolore maxime, voluptatem minus perspiciatis, autem quos officia expedita corrupti fuga. Illum explicabo omnis id facilis consectetur maxime! Harum dolorem repellat est nam. Recusandae, provident debitis?
+      Dolor, odit. Exercitationem eaque, blanditiis unde similique modi non temporibus distinctio expedita tempore officiis voluptatem velit. Aliquid non doloribus, distinctio minus quae eum ex ipsam commodi. Provident quis aliquid labore.
+      Eligendi omnis similique quas dolor iste! Quidem delectus eum blanditiis minus impedit repellat, dignissimos maxime non, iusto doloribus, saepe nam aperiam. Consequuntur reiciendis dicta quis provident sequi officiis, aspernatur cumque.
+      Maxime incidunt error tempora mollitia omnis enim, consequatur facilis at exercitationem tempore corporis consequuntur doloribus iste blanditiis ex labore quasi temporibus deserunt laudantium adipisci molestiae. Ex aperiam nisi aspernatur ducimus?</p>
+     
+      <h2 id="section-css">CSS</h2>
+      <p class="css">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nostrum beatae quae animi consectetur ut, ullam fugit nihil. Illum ipsam necessitatibus eum. At ipsum minus ratione pariatur ad. Aut, reprehenderit!
+      Iusto dignissimos commodi id amet iure consequatur, voluptatem necessitatibus ratione repellendus fuga vitae. Aliquid enim dolorum exercitationem saepe, deserunt esse facere numquam architecto vero, inventore provident dolor ab dignissimos fuga.
+      Excepturi aut unde reprehenderit hic ipsum recusandae debitis eum laborum vitae dolore numquam suscipit, soluta temporibus facere asperiores! Laborum vel culpa consectetur aut reprehenderit possimus expedita, illum corrupti? Reprehenderit, vitae!
+      Ad perspiciatis, praesentium nisi optio cupiditate debitis molestias maiores vitae cumque hic non, corrupti reiciendis recusandae quaerat! Delectus quaerat maiores doloribus dolores. Qui ad quam maiores eum minima facilis id!
+      Saepe, vero natus! Deleniti dolor soluta quaerat eum delectus obcaecati placeat ipsum repellendus in at, suscipit voluptates! Non deleniti officiis dicta culpa voluptatem illo repudiandae nihil ullam exercitationem iusto? Voluptatum!
+      Maxime suscipit aut animi quibusdam eum unde impedit qui voluptatum, et a nostrum aperiam repudiandae reiciendis consequuntur iusto delectus neque vel. Quasi quaerat delectus iste, placeat earum animi at perferendis!
+      Id obcaecati voluptates expedita dolore iste animi ea doloremque eaque repudiandae, velit quod asperiores officiis cumque ipsa qui ipsum accusantium provident. Vel earum itaque ullam esse nisi dolore laudantium asperiores.
+      Inventore maxime recusandae incidunt expedita ipsam, alias perspiciatis repudiandae facilis praesentium minima, in, esse aliquam nihil! Amet esse, quidem fugiat vero possimus perferendis nesciunt ipsam praesentium est, accusamus exercitationem tenetur!
+      Id deleniti deserunt reiciendis commodi quod mollitia rem corrupti magni aliquid, minima aut numquam quam at eligendi? Suscipit dolorum eos labore! Porro, praesentium sapiente. Deleniti earum veniam dolorum expedita ullam?
+      Optio sunt quibusdam similique odio eveniet voluptatum assumenda nisi repellendus dignissimos, laboriosam odit suscipit repudiandae magnam cumque quod nostrum, quidem asperiores iure quis placeat eum nobis! Doloribus labore corrupti alias? </p>
+      <h2 id="section-js">JAVASCRIPT</h2>
+      <p class="javascript">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente vero adipisci voluptatibus expedita soluta impedit nobis eaque? Tempore incidunt omnis ratione illum, eum, nostrum ipsum velit commodi cumque possimus deserunt?
+      Cumque eum iste fuga modi eveniet dolorum, reiciendis unde quaerat iusto quibusdam delectus ut odio sapiente dolores, fugit harum exercitationem? Deserunt optio ex quae fugit quisquam! Voluptates sit officiis soluta!
+      Molestiae suscipit quas tempora? Accusamus, molestias sapiente. Cupiditate soluta aperiam doloremque est quasi voluptate eligendi non, deleniti quidem dignissimos, rerum enim fugiat sequi nemo nihil velit veritatis dolorem. Praesentium, doloremque!
+      Deleniti maiores eligendi architecto repellendus molestias labore doloremque quidem totam ratione aliquid, illum quasi alias? Sequi, ratione! Reiciendis ducimus facere fugit maiores numquam doloremque doloribus quasi laudantium! Quaerat, facilis ab?
+      Eligendi soluta sed recusandae earum. Voluptatem labore, expedita ratione officiis repellat veniam commodi consequatur accusantium consectetur, ipsum beatae corporis doloremque possimus corrupti nostrum reiciendis quaerat provident hic odit nam sunt?
+      Maiores pariatur minima, magnam delectus quod accusamus eligendi asperiores laborum cupiditate quisquam. A ullam omnis earum quas ipsa unde eum provident laudantium numquam, doloribus quasi minima dolorum veniam nulla id.
+      Modi repellendus a aliquam magnam eos sequi saepe quidem vero incidunt, veritatis accusantium laudantium molestias. Accusantium, inventore expedita iste voluptatem repellat reiciendis exercitationem ducimus, quo minima quam dolor. Architecto, maiores?
+      Dolor minima voluptatem, voluptatum sit id deleniti eligendi nisi ratione amet quis? Nesciunt autem aliquid beatae esse, aut cum. Aliquid officia incidunt dolor quisquam eveniet voluptatibus, consequatur suscipit necessitatibus ipsa.
+      Numquam itaque et obcaecati ipsum alias. Maxime, repellendus. Laudantium enim natus blanditiis deserunt laborum. Repellendus vero ratione aliquam enim, mollitia explicabo voluptatibus incidunt obcaecati nobis doloremque possimus, pariatur commodi eius!
+      Ad possimus excepturi modi fugiat odio incidunt? Ad totam dolore exercitationem, quod numquam similique reiciendis, sint accusantium soluta, molestiae cum voluptatem ea nam? Optio quae vitae mollitia nulla explicabo repellendus? </p>
+    </article>
+
+
+   </section>
+
+   
+
+
+
+</main>
+
+<footer>
+
+</footer>
+
+</body>
+
+</html>
